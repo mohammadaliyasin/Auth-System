@@ -4,7 +4,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:login_ui/auth/authscreen.dart';
-import 'package:login_ui/homeScreen.dart';
+import 'package:login_ui/chatBot.dart';
 
 class AuthController {
   final FirebaseStorage _storage = FirebaseStorage.instance;
@@ -74,7 +74,7 @@ class AuthController {
           SnackBar(content: Text('Signup successful! Please log in.')),
         );
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const Homescreen()),
+          MaterialPageRoute(builder: (context) => ChatScreen()),
         );
       }
     } catch (error) {

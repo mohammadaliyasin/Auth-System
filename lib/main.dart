@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:login_ui/auth/authscreen.dart';
 import 'package:login_ui/chatBot.dart';
-import 'package:login_ui/homeScreen.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -47,7 +46,7 @@ class MyApp extends StatelessWidget {
             return const CircularProgressIndicator();
           }
           if (usersnapshot.hasData) {
-            return Homescreen();
+            return ChatScreen();
           } else {
             return AuthScreen();
           }
