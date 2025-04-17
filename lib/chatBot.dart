@@ -116,12 +116,12 @@ class _ChatScreenState extends State<ChatScreen> {
         padding: const EdgeInsets.all(12),
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.75),
         decoration: BoxDecoration(
-          color: isUser ? Color(0xff1757FF) : Color.fromRGBO(255, 255, 255, 0.1),
+          color: isUser ? Color(0xffd6fc51) : Color.fromRGBO(255, 255, 255, 0.1),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Text(
           message['message'] ?? '',
-          style: const TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16,color: isUser ? Colors.black : Colors.white,),
         ),
       ),
     );
@@ -137,11 +137,11 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff11151C),
+      backgroundColor: Color(0xff11151E),
       appBar: AppBar(
         title: const Text('🩺 AI Chat Assistant',style: TextStyle(color: Colors.white),),
         centerTitle: true,
-        backgroundColor: Color(0xff11151C),
+        backgroundColor: Color(0xff11151E),
       ),
       body: Column(
         children: [
@@ -165,16 +165,16 @@ class _ChatScreenState extends State<ChatScreen> {
                   child: TextField(
                     controller: _controller,
                     maxLines: null,
-                    cursorColor: const Color(0xff4361EE),
+                    cursorColor: const Color(0xffd6fc51),
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       hintText: 'Ask a medical question...',
                       hintStyle: TextStyle(color: Color.fromRGBO(255, 255, 255, 0.6),),
                       filled: true,
                       fillColor: Color(0xff151A23),
-                      focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xff1757FF),),borderRadius: BorderRadius.circular(20),),
+                      focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffd6fc51),),borderRadius: BorderRadius.circular(20),),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff1757FF),),
+                        borderSide: BorderSide(color: Color(0xffd6fc51),),
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
